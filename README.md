@@ -50,3 +50,7 @@
 
 ### Conda Environment
 参照`conda pack`的使用流程，对稳定运行的conda环境进行打包备份保存
+
+### 视频流程
+见`my_video_swap.py`中的`def video_swap_face(data, tqdm_prefix)`，里面有针对source是image还是video两种情况的处理，video情况下读取到第一个有脸帧，
+有target video的处理，比如检测不到人脸就重复上一帧，裁剪人脸和贴回操作。如果一些方法直接是内置了人脸裁剪和贴回的话，直接使用`ret, frame = ...`中的frame即可。
